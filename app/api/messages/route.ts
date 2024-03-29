@@ -69,7 +69,7 @@ export async function GET(
     let nextCursor = null;
 
     if (messages.length === MESSAGES_BATCH) {
-      nextCursor = messages.length > 0 ? messages[MESSAGES_BATCH - 1].id : null;
+      nextCursor = messages[MESSAGES_BATCH - 1].id;
     }
 
     return NextResponse.json({
